@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+    .Move {
+        position: relative;
+        animation: move 8s infinite linear;
+    }
+
+    @keyframes move {
+        0% {
+            left: 0;
+        }
+
+        25% {
+            left: 35%;
+        }
+
+        50% {
+            left: 70%;
+        }
+
+        75% {
+            left: 95%;
+        }
+
+        100% {
+            left: 120%;
+        }
+    }
+
+    .Social_Media:hover {
+        transform: scale(1.2);
+        border-radius: 50%;
+    }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+<link rel="stylesheet" href="output.css">
+
+<body>
+
+    <!-- CREATING A NAVBAR  -->
+    <nav class="border-2 border-black bg-black   ">
+
+        <!-- nav-items -->
+
+        <div id="nav-items" class=" w-full  flex justify-between p-2 ">
+
+            <!--LEFT  -->
+
+            <div id="left-nav" class="flex-auto border-2 border-black ">
+                <div class="h-full text-2xl" style="font-family: 'Sofia', sans-serif;">
+                    <div class=" flex items-center text-white ">
+                        <img class="w-24" src="../imgs/logo-removebg-preview.png" alt="#" />
+                        <label class="-ml-3">Tra</label><span><label class="text-yellow-400">sher's</label></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CENTER  -->
+
+            <div id="center-nav" class=" flex-auto  border-2 border-black ">
+                <div class=" h-full flex items-center" style="font-family: 'Sofia', sans-serif;">
+                    <ul class="flex flex-1 justify-between  text-2xl text-white ">
+
+
+                        <li
+                            class="hover:text-yellow-400 hover:text-2xl hover:tracking-widest transition-all ease-out duration-500">
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+
+
+
+                        <ul id="Accessories" class="relative ">
+                            <li
+                                class="hover:text-yellow-400 hover:text-2xl  hover:tracking-widest transition-all ease-out duration-500">
+                                <a href="#">
+                                    Accessories
+                                </a>
+                            </li>
+
+
+                            <ul id="dropdown-menu"
+                                class="z-10 absolute bg-black rounded-b-xl flex flex-col  text-center w-full border-2 border-black">
+                                <li
+                                    class=" flex-auto p-3 hover:text-yellow-400 hover:text-xl  hover:tracking-widest transition-all ease-out duration-500">
+                                    <a href="#">GripTape</a>
+                                </li>
+                                <li
+                                    class=" flex-auto p-3 hover:text-yellow-400 hover:text-xl  hover:tracking-widest transition-all ease-out duration-500">
+                                    <a href="#">Decks</a>
+                                </li>
+                                <li
+                                    class=" flex-auto p-3 hover:text-yellow-400 hover:text-xl  hover:tracking-widest transition-all ease-out duration-500 rounded-b-lg ">
+                                    <a href="#">Parts</a>
+                                </li>
+                            </ul>
+                        </ul>
+
+
+                        <li
+                            class=" cursor-pointer hover:text-yellow-400 hover:text-2xl  hover:tracking-widest transition-all ease-out duration-500">
+                            <a  id="Admin">
+                                Admin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+
+            <div id="right-nav" class="flex-none  border-2 border-black   ">
+                <div class="h-full flex items-center justify-around  ">
+                    <a id="User_Navigating_to_User_Registration_Page" href="#"><img class="w-12 rounded-sm ml-2 mr-2 "
+                            src="../imgs/icons8-user.gif" alt="#" /></a>
+                    <a href="#"><img class="w-10 rounded-sm ml-2 mr-2  " src="../imgs/icons8-cart.gif" alt="#" /></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- END OF NAVBAR -->
+
+
+    <!-- User Registration -->
+
+            <main id="User_Registration_Page" class="relative  ">
+                <div class=" border-2 border-black flex flex-col rounded-lg max-w-md m-auto ">
+                    <div class="absolute text-4xl cursor-pointer">
+                        <div id="User_Registration_Form_Close_Btn">
+                            X
+                        </div>
+                    </div>
+                    <div class="text-center text-3xl p-2">
+                        <label>Register</label>
+                    </div>
+                    <form action="index.html" id="User_Registration_Form"
+                        class="flex flex-col p-3 bg-gray-300 rounded-md">
+                        <div class="flex-auto text-2xl p-2 ">
+                            <label>Name : </label><input
+                                class="bg-transparent  pl-5 focus:outline-none capitalize border-2 rounded-md border-green-800 p-2 w-full placeholder:text-black"
+                                type="text" id="User_Name" required name="User_Name" /><span class="text-red-800 pl-3"
+                                id="Error_User_Name"></span>
+                        </div>
+                        <div class="flex-auto  text-2xl p-2">
+                            <label>Phone_Number : </label><input
+                                class="bg-transparent  pl-5 focus:outline-none    capitalize border-2 rounded-md border-green-800 p-2 w-full placeholder:text-black"
+                                type="number" min="0" name="User_Number" id="User_Number" required /><span
+                                class="text-red-800 pl-3" id="Error_User_Number"></span>
+                        </div>
+                        <div class="flex-auto  text-2xl p-2">
+                            <label>Create Password : </label><input
+                                class="bg-transparent  pl-5 focus:outline-none    capitalize border-2 rounded-md border-green-800 p-2 w-full placeholder:text-black"
+                                type="password" required id="User_Create_Password" name="User_Create_Password" /><span
+                                class="text-red-800 pl-3" id="Error_User_Create_Password"></span>
+                        </div>
+                        <div class="flex-auto  text-2xl p-2">
+                            <label>Confirm Password : </label><input
+                                class="bg-transparent  pl-5 focus:outline-none capitalize border-2 rounded-md border-green-800 p-2 w-full placeholder:text-black"
+                                type="password" required id="User_Confirm_Password" name="User_Confirm_Password" /><span
+                                class="text-red-800 pl-3" id="Error_User_Confirm_Password"></span>
+                        </div>
+                        <div class="flex-auto  text-2xl p-2 text-center">
+                            <button
+                                class="border-2 border-black w-full p-2 rounded-md text-2xl font-medium tracking-widest hover:bg-gray-600 hover:text-white transition-all ease-linear duration-700 "
+                                type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+
+            <!-- end  -->
+
+
+
+            <main id="Admin_Pannel" class="relative  ">
+                <div class="border border-black flex flex-col w-full max-w-md m-auto bg-green-400 rounded-lg ">
+                    <div class="absolute text-4xl cursor-pointer">
+                        <div id="Admin_Pannel_Close">
+                            X
+                        </div>
+                    </div>
+                    <div class="underline text-center text-3xl p-2">
+                        <label>Admin Pannel</label>
+                    </div>
+                    <form id="Admin_Pannel_Form" class="flex flex-col p-3  rounded-md">
+                        <div class="flex-auto text-2xl p-2 ">
+                            <label>Username : </label><input
+                                class="bg-transparent  pl-5 focus:outline-none capitalize border-2 rounded-md border-green-800 p-2 w-full placeholder:text-black"
+                                type="text" id="admin_pannel_username" required /><span class="text-red-800 pl-3"
+                                id="admin_pannel_username_error_message"></span>
+                        </div>
+                        <div class="flex-auto  text-2xl p-2">
+                            <label>Password : </label><input
+                                class="bg-transparent  pl-5 focus:outline-none    capitalize border-2 rounded-md border-green-800 p-2 w-full placeholder:text-black"
+                                type="password" id="admin_pannel_password" required /><span class="text-red-800 pl-3"
+                                id="admin_pannel_password_error_message"></span>
+                        </div>
+                        <div class="flex-auto  text-2xl p-2 text-center">
+                            <button
+                                class="border-2 border-black w-full p-2 rounded-md hover:bg-green-600 transition-all ease-linear duration-200 "
+                                type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+
+    <!-- end of Registration of user and admin -->
+
+    <!-- Second Section  -->
+
+    <section class="flex flex-col border border-black overflow-hidden bg-blue-400">
+        <div class="flex-auto">
+            <img class="Move" style="transform:scaleX(-1);" src="../imgs/bz-Wipe-Out-After-Effects-2D-A-unscreen.gif"
+                width="200px" height="200px" />
+        </div>
+        <div class="w-full text-center p-2  flex-auto ">
+            <form action="#" method="post">
+                <input class="border-2 border-black p-2  w-96 text-center rounded-md  capitalize" type="search"
+                    placeholder="Search Product" required /><br>
+                <button class=" text-white bg-blue-600 hover:bg-blue-700 transition-all ease-out border-2 border-black w-80 m-2 p-2 rounded-md
+                " type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- End Of Second Section -->
+
+
+    <!-- Third Section  -->
+
+    <main>
+        <div class="relative  text-center  text-3xl p-2 ">
+            <label>Available Products </label>
+        </div>
+
+        <section class="p-2">
+            <div class="grid grid-cols-3 gap-10 ">
+
+                <!-- 1 -->
+
+                <div id="">
+                    <div class="border-2 border-black rounded-lg  ">
+                        <img class="m-auto cursor-pointer" src="../skate_images/img1-removebg-preview.png" alt="#"
+                            width="250px" height="250px" />
+                    </div>
+                    <div class="text-center">
+                        <label for="">
+                            <span class="text-xl" id="Product_Name">Oxelo : </span><span id="Product_Type">Kids and
+                                Adult Skateboard CP100</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+
+
+
+                <!-- 3 -->
+
+
+            </div>
+        </section>
+    </main>
+
+    <!-- end of third Section -->
+
+
+    <!-- Fourth Section  -->
+
+    <footer class="bg-black text-white">
+        <div class="border-2 border-black  grid grid-cols-2">
+
+            <div class=" flex flex-col border-2 border-black  ">
+                <div class="p-2 text-2xl text-center flex-auto   ">
+                    <label class="font-medium">Follow Us : </label>
+                    <ul class="flex gap-12 justify-center  place-items-center  ">
+                        <a href="#">
+                            <li><img class="Social_Media transition-all ease-linear duration-500 "
+                                    src="../imgs/twitter-removebg-preview.png" alt="#" width="50px" height="50px" />
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li><img class="Social_Media transition-all ease-linear duration-500 "
+                                    src="../imgs/wp-removebg-preview.png" alt="#" width="40px" height="40px" /></li>
+                        </a>
+                        <a href="#">
+                            <li><img class="Social_Media transition-all ease-linear duration-500 "
+                                    src="../imgs/telegram-removebg-preview.png" alt="#" width="35px" height="35px" />
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+
+
+
+                <div class="flex flex-col flex-auto font-medium  items-start ">
+                    <label class="p-2 ">Contact Us:</label>
+                    <label class="p-2 ">Email:adityapawar000099@gmail.com</label>
+                    <label class="p-2 ">Phone_No:8356893188(Call/Whatsapp)</label>
+                </div>
+            </div>
+
+
+            <div class="p-3 border-2 border-black">
+                <form accept="#" method="post" class=" text-center p-2">
+                    <h3 class="text-xl font-medium p-2">Let's Stay Connected </h3>
+                    <h5 class="text-xl font-medium p-2">Enter Your Email To Unlock 10% Off </h5>
+                    <input
+                        class="focus:outline-none focus:border-b-2  border-b-2 p-2 w-full border-green-500 bg-transparent  text-center focus:border-green-500"
+                        type="email" placeholder="Your Email" required /><br>
+                    <button
+                        class="border-2 border-green-400 hover:bg-green-500 transition-all ease-linear text-2xl hover:text-black font-medium  duration-500 w-full rounded-md mt-2 p-2"
+                        type="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+        <hr>
+        <div class="bg-black w-full text-white text-center  text-2xl p-3">
+            <h3 style="font-family: 'Sofia', sans-serif;">Thra<span class="text-yellow-400">sher's</span> © All Right
+                Reserved</h3>
+        </div>
+    </footer>
+
+    <!-- End Of Fourth Section -->
+
+</body>
+<script src="index.js"></script>
+
+</html>

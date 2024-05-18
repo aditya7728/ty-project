@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="output.css">
+<style>
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+
+    }
+</style>
+
+<body>
+
+    <section>
+        <main>
+            <div class=" text-center text-4xl font-medium border-2 border-black bg-green-500">
+                <label>Admin</label>
+            </div>
+
+            <div>
+                <div class="float-right">
+                    <ul class="flex flex-row  bg-red-100 ">
+                        <li class="border p-2 bg-green-700 text-white  "><a href="#">Upload_Product</a></li>
+                        <li class="border p-2 bg-green-700 text-white "><a href="#">Update_Product</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- skateboard -->
+
+                <form id="Admin_Pannel_Skateboard"
+                    class="border-2 flex flex-row flex-wrap place-content-around border-black  gap-10 p-4  w-full bg-green-500    text-black  place-items-center text-xl  "
+                    action="index.html">
+                    <div>
+                        <label>Upload_Product_Image : </label><input id="Upload_Product_Image" type="file"
+                            accept="image/png, image/jpeg, image/gif" required />
+                    </div>
+                    <div>
+                        <label>Upload_Product_Name : </label><input
+                            class="bg-transparent placeholder:text-white border-b-2 border-white focus:outline-none"
+                            type="text" required />
+                    </div>
+                    <div>
+                        <label>Upload_Product_Type : </label><input
+                            class="bg-transparent placeholder:text-white border-b-2 border-white focus:outline-none"
+                            type="text" required />
+                    </div>
+                    <div>
+                        <label>Upload_Product_Size : </label><input
+                            class="bg-transparent placeholder:text-white border-b-2 border-white focus:outline-none"
+                            type="text" required />
+                    </div>
+
+                    <div>
+                        <label>Uploaded_Product_Id : </label><input
+                            class="bg-transparent placeholder:text-white border-b-2 border-white focus:outline-none"
+                            type="text" required readonly/>
+                    </div>
+                   
+                   
+                    <div class="border-2 text-center border-black w-full text-2xl hover:bg-green-700 transition-all ease-linear duration-200 p-2 cursor-pointer">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+
+            <!-- endddddd -->
+
+
+
+            </div>
+        </main>
+    </section>
+
+</body>
+
+</html>
+<script src="admin.js"></script>
